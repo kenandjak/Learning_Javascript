@@ -13,6 +13,9 @@
         h1 {
             color:aquamarine;
         }
+        h6 {
+            color: orangered;
+        }
     </style>
 </head>
 <body>
@@ -20,9 +23,18 @@
     <p>Veja os seguintes comandos:</p>
     <script>
     window.alert('Qui quieris, terráqueo?')
-    window.prompt('Senha:')
-    //Assim qualquer senha vale
-    </script>
+    var nome = window.prompt('Nome: ')
+    var senha = window.prompt('Senha: ')
+    window.alert('Está exposta a sua senha: '+senha+'\nhihih')
+    /*var idade = Number.parseInt(window.prompt("Qual a sua idade, hein? "))
+    var casa = Number.parseInt(window.prompt("Onde que tu mora? "))
+    var soma = idade + casa
+    window.alert("Duvido que essa soma seja quebrada: "+soma+"\n Óia...num disse?!!!")*/
+    document.write(`<p>Opa! Tudo bem, ${nome}?\nSua senha 
+        <strong>${senha}</strong> tem ${senha.length} letras.</p>`)
     
+    </script>
+    <h6>Não se preocupe; é apenas um testezinho...</h6>
+    <div>Clique aqui e saiba mais</div>
 </body>
 </html>
