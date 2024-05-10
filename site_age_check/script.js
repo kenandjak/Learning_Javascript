@@ -13,39 +13,31 @@ function verificar(){
         img.setAttribute('id','foto')
         //res.innerHTML = `Idade calculada: ${idade}`
         var gênero = ''
-        if (fsex[0].checked){
-            gênero = 'Feminino'
-            if(idade >= 0 && idade < 10){
-                // Criança
-                img.setAttribute('src','imagens/baby_w.png')
-            } else if (idade < 21) {
-                // Jovem
-                img.setAttribute('src','imagens/young_w.png')
-            } else if (idade < 50){
-                // Adult
-                img.setAttribute('src','imagens/adult_w.png')
-            } else {
-                // Idos
-                img.setAttribute('src','imagens/old_w.png')
-            }
-        }else if (fsex[1].checked){
-            gênero = 'Masculino'
-            if(idade >= 0 && idade < 10){
-                // Criança
-                img.setAttribute('src','imagens/baby_m.png')
-            } else if (idade < 21) {
-                // Jovem
-                img.setAttribute('src','imagens/young_m.png')
-            } else if (idade < 50){
-                // Adult
-                img.setAttribute('src','imagens/adult_m.png')
-            } else {
-                // Idos
-                img.setAttribute('src','imagens/old_m.png')
-            }
+        if (fsex[0].checked) gênero = 'Feminino';
+        else gênero = 'Masculino';
+
+        if(idade >= 0 && idade < 3){
+            // Bebê
+            img.setAttribute('src',`imagens/${gênero}/baby.png`)
+        } else if (idade < 12){
+            // Criança
+            img.setAttribute('src',`imagens/${gênero}/child.png`)
+        }else if (idade < 19 ){
+            // Adolescente
+            img.setAttribute('src',`imagens/${gênero}/teen.png`)
+        } else if (idade < 30) {
+            // Jovem
+            img.setAttribute('src',`imagens/${gênero}/young.png`)
+        } else if (idade < 60){
+            // Adult
+            img.setAttribute('src',`imagens/${gênero}/adult.png`)
+        } else {
+            // Idos
+            img.setAttribute('src',`imagens/${gênero}/old.png`)
         }
+
         res.style.textAlign = 'center'
-        res.innerHTML = `Detectamos pessoa do gênero ${gênero} com ${idade} anos.`
+        res.innerHTML = `Detectamos uma pessoa do gênero ${gênero} com ${idade} anos.`
         res.appendChild(img)
     }
 }
