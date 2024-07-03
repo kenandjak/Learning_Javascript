@@ -1,0 +1,29 @@
+body {
+    background: pink;
+    font: normal 15pt Times;
+}
+
+header {
+    text-align: center;
+
+}
+
+section {
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+select {
+    margin: 3rem 11rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic
+}
