@@ -1,5 +1,5 @@
 // Usado para testar valores pontuais
-
+// Executa com F8
 var agora = new Date()
 var diaSem = agora.getDay()
 

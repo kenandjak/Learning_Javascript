@@ -20,3 +20,4 @@ if (alert(hours) < 5) {
 } else {
     console.log("The Night!")
 }
+// Executa com F8
