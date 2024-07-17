@@ -43,11 +43,16 @@ function finalizar() {
         valores.sort()
         let maior = valores[tot-1]
         let menor = valores[0]
-        let soma = sum(valores)
-        let media = (maior + menor) / 2
+        let soma = 0
+        for(let i in valores) {
+            soma += valores[i]}
+        let media = soma / valores.length
+
         res.innerHTML = ''
         res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
-        res.innerHTML += `<p>O maior valor informado foi: ${maior}</p>`
-        res.innerHTML += `<p>O menor valor informado foi ${menor}</p>`
+        res.innerHTML += `<p>O maior valor informado foi: ${maior}.</p>`
+        res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</p>`
+        res.innerHTML += `<p>A média dos valores digitados é ${media}.</p>`
     }
 }
